@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Web of the Avinka Clone App">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="avinka_clone">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>Avinka WebAPP Clone</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  
+   <script id="preloader-script">
+    function removeSafe(id) {
+      if (document.getElementById(id)) {
+        document.getElementById(id).remove();
+      }
+    }
+    function verifyIsLoaded() {
+      if (document.getElementsByTagName("flt-glass-pane").length == 1) {
+        removeSafe("preloader");
+        removeSafe("preloader-style");
+        removeSafe("preloader-viewport");
+        removeSafe("preloader-script");
+      } else {
+        setTimeout(verifyIsLoaded, 500);
+      }
+    }
+    verifyIsLoaded();
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script> 
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDcAk-QElPCjnE4nxN4WW1mG33UvItbmDg",
+      authDomain: "avinkaclone.firebaseio.com",
+      databaseURL: "https://avinkaclone.firebaseio.com",
+      projectId: "avinkaclone",
+      storageBucket: "avinkaclone.appspot.com",
+      messagingSenderId: "265969913776",
+      appId: "1:265969913776:web:39d397ad3c40edf5831075",
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
