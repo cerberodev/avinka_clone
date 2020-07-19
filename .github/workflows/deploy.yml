@@ -1,6 +1,9 @@
-name: Avinka Clone
+name: Deploy to Github y Firebase [Avinka Clone]
 
 on:
+  
+  workflow_dispatch:
+  
   push:
     branches:
       - master
@@ -21,15 +24,24 @@ jobs:
     - name: Enable Flutter web 
       run: flutter config --enable-web
       
-    - name: Install dependencies
+    - name: Install dependencies of Flutter
       run: flutter packages get
       
     - name: Build web
       run: flutter build web
       
-    - name: Deploy
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.token }}
         publish_dir: ./build/web
-        cname: avinkaclone.cerbero.dev
+
+    - name: Install dependencies of npm
+      run: npm install
+      
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
