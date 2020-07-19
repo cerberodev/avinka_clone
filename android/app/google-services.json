@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "265969913776",
+    "firebase_url": "https://avinkaclone.firebaseio.com",
+    "project_id": "avinkaclone",
+    "storage_bucket": "avinkaclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265969913776:android:39d397ad3c40edf5831075",
+        "android_client_info": {
+          "package_name": "com.example.avinka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265969913776-a3vb9nan40ri9khc99rmttefkv30b7ph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC75D53MCX8OdjzLgqlOndN2BGkfYyznpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265969913776-a3vb9nan40ri9khc99rmttefkv30b7ph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
