@@ -38,9 +38,13 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+            primarySwatch: Colors.blue,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+            inputDecorationTheme: InputDecorationTheme(
+              labelStyle: TextStyle(
+                color: Colors.grey,
+              ),
+            )),
         home: SplashScreen(),
       ),
     );
