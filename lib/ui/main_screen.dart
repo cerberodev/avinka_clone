@@ -18,7 +18,14 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     CartScreen(),
     OrdersScreen(),
-    AccountScreen(),
+    Navigator(
+      initialRoute: "/",
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(builder: (BuildContext context) {
+          return AccountScreen();
+        });
+      },
+    ),
   ];
   @override
   Widget build(BuildContext context) {
