@@ -1,6 +1,13 @@
 # avinka
 
-A new Flutter project.
+Avinka Clone
+
+### Video on Youtube
+
+- [Flutter Warrior #4: Clonando la App de Avinka - #Parte1](https://www.youtube.com/watch?v=dpeMtzTrPuQ)
+- [Flutter Warrior #5: Clonando la App de Avinka - #Parte2](https://www.youtube.com/watch?v=ARanTY1Iuls)
+- [Flutter Warrior #7: Clonando la App de Avinka - #Parte3](https://www.youtube.com/watch?v=85MXgdBIH1g)
+
 
 ## Getting Started
 
